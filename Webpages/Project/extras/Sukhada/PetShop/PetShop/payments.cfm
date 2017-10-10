@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>DemoKart | Payment</title>
+  <!--<link href="images/favicon.ico" rel="SHORTCUT ICON" />-->
+  <!--<link rel="stylesheet" href="css/font.css">-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body class="payments-page">
+  <header>
+    <div class="sub-header"><span> | </span><a href="#.">Logout</a></div>
+    <ul class="main-header clearfix">
+      <li class="pull-left"><a href="#." class="main-logo white-text">DemoKart</a></li>
+      <li><a href="#." class="orders white-text">Orders</a></li>
+      <li><a href="#." class="cart white-text">Cart (0)</a></li>
+    </ul>
+  </header>
+  <section>
+  <FORM name="PaymentForm" action="login.cfm" method="post">
+    <h2>Payments</h2>
+    <div class="payments-wrapper clearfix">
+      <div class="create-account-wrapper">
+        <div class="create-account">
+          <h3>Create Account</h3>
+          <label for="login-name">First Name</label>
+          <input type="text" placeholder="First Name" id="customerFName" class="form-control mandatory" name="customerFName">
+		  <label for="login-name">Last Name</label>
+          <input type="text" placeholder="Last Name" id="customerLName" class="form-control mandatory" name="customerLName">
+          <label for="login-phone">Phone Number</label>
+          <input type="text" placeholder="Phone Number" id="phoneNumber" class="form-control mandatory" name="phoneNumber">
+          <label for="login-email">Email</label>
+          <input type="email" placeholder="Email" id="email" class="form-control mandatory" name="email">
+          <label for="login-password">Password</label>
+          <input type="password" placeholder="Password" id="password" class="form-control mandatory" name="password">
+          <label for="login-confirm-password">Confirm Password</label>
+          <input type="password" placeholder="Confirm Password" id="login-confirm-password" class="form-control mandatory">
+        </div>
+      </div>
+      
+      <div class="select-address-wrapper new-shipping-address-details clearfix">
+        <h3>Shipping Address</h3>
+        <div class="contact shipping-address clearfix">
+          <p class="heading">Shipping Address</p>
+          <input type="text" placeholder="Street Address" class="form-control full-width mandatory">
+          <input type="text" placeholder="Apt, Suite, Bldg (optional)" class="form-control full-width">
+          <div class="zip-code-wrapper clearfix">
+            <input type="text" placeholder="Zip Code" class="form-control small-input mandatory">
+            <span class="help-text">Enter Zip for City and State</span>
+          </div>
+          <div class="zip-code-wrapper clearfix">
+            <input type="text" placeholder="Zip Code" class="form-control small-input mandatory">
+            <span class="help-text">Enter Zip for City and State</span>
+          </div>
+        </div>
+		
+		<div class="address clearfix payment-mode-wrapper">
+        <h3>Payment Method</h3>
+        <div class="payment-options">
+          <input type="radio" id="payment-mode"> <label for="payment-mode">VISA / Mastercard</label>
+        </div>
+        <div class="card-section">
+          <input type="text" placeholder="Debit/Credit Card Number" class="form-control big-input mandatory">
+          <input type="text" placeholder="Security Code" class="form-control small-input">
+          <label>Expires </label>
+          <select>
+            <option>Month</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <select>
+            <option>Year</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+            <option>2031</option>
+          </select>
+        </div>
+      </div>
+      </div>
+      <div class="select-address-wrapper billing-address-details clearfix">
+        <h3>Billing Address <span class="same-address-flag pull-right"><label for="save-billing-information">Same as shipping address</label><input type="checkbox" id="save-billing-information"></span></h3>
+        <div class="contact billing-contact clearfix">
+          <p class="heading">Billing Contact</p>
+          <input type="text" placeholder="First Name" class="form-control small-input mandatory">
+          <input type="text" placeholder="Last Name" class="form-control big-input mandatory">
+          <input type="text" placeholder="Area Code" class="form-control small-input mandatory">
+          <input type="text" placeholder="Primary Phone" class="form-control big-input mandatory">
+          <input type="text" placeholder="Area Code" class="form-control small-input">
+          <input type="text" placeholder="Alternate Phone (optional)" class="form-control big-input">
+          <input type="email" placeholder="Email Address" class="form-control full-width mandatory">
+        </div>
+        <div class="address billing-address clearfix">
+          <p class="heading">Billing Address</p>
+          <input type="text" placeholder="Company Name (optional)" class="form-control full-width">
+          <input type="text" placeholder="Street Address" class="form-control full-width mandatory">
+          <input type="text" placeholder="Apt, Suite, Bldg (optional)" class="form-control full-width">
+          <div class="zip-code-wrapper clearfix">
+            <input type="text" placeholder="Zip Code" class="form-control small-input mandatory">
+            <span class="help-text">Enter Zip for City and State</span>
+          </div>
+          <div class="zip-code-wrapper clearfix">
+            <input type="text" placeholder="Zip Code" class="form-control small-input mandatory">
+            <span class="help-text">Enter Zip for City and State</span>
+          </div>
+		  <div class="save-billing-info">
+			<input type="checkbox" id="save-billing-information"><label for="save-billing-information">Save my default credit/debit card information</label>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button type="button" class="btn btn-secondary">Chat</button>
+	  <input type="Submit" class="btn btn-primary pull-right" value="Continue">
+    </div>
+	</form>
+  </section>
+  <footer>
+    <p class="copyright-text">Copyright 2017 demokart.com</p>
+  </footer>
+</body>
+
+</html>
